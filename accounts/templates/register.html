@@ -2,8 +2,9 @@
 
 {% block content %}
 
-    <form method="post">
+    <form method="post" class="auth-form">
         {% csrf_token %}
+        {{ user_form.non_field_errors }}
         <div class="form-group">
             {{ user_form.username.errors }}
             <label>Usuário: </label>
